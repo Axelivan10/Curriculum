@@ -1,0 +1,22 @@
+<div class="background-color uk-padding uk-light">
+    <table class="uk-table uk-table-justify uk-table-divider uk-container-large  uk-margin-left" 
+    uk-height-viewport="offset-top: true">
+        <thead>
+            <tr>
+                <th>TITULO</th>
+                <th>PORCENTAJE</th>
+                <th>URL DE IMAGEN</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let habilidad of habilidades">
+            <tr>
+                <td>{{habilidad.titulo}}</td>
+                <td>{{habilidad.porcentaje}}</td>
+                <td>{{habilidad.url_imagen}}</td>
+                <td><button class="uk-button uk-button-default" [routerLink]="[ '/admin/habilidades/', habilidad.id]" type="button">EDITAR</button></td>
+                <td><button class="uk-button uk-button-default" (click)="deleteHabilidad(habilidad.id)" type="button">ELIMINAR</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

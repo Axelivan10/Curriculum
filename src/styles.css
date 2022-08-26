@@ -1,0 +1,6 @@
+/* You can add global styles to this file, and also import other style files */
+.background-color{
+    background-image: url(/assets/img/fondo-arena.png);
+    width: 100%;
+    height: 100%;
+}

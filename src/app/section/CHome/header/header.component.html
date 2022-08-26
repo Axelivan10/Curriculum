@@ -1,0 +1,267 @@
+<!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.14/css/uikit.min.css" />
+
+<!-- UIkit JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.14/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.14/js/uikit-icons.min.js"></script>
+
+
+
+<div  class="uk-position-relative" id="header" >
+    <div class="uk-section-default">
+        <div uk-height-viewport class="uk-light uk-background-cover" style="background-image: url(/assets/img/background.png)">
+           
+            <div class="uk-sticky" uk-sticky=" cls-active: uk-navbar-sticky uk-navbar-transparent;">
+        
+                <nav uk-navbar class="uk-container uk-navbar-transparent">
+                    <div class="uk-navbar-left">
+                        <ul class="uk-navbar-nav">
+                            <li class="uk-active uk-margin-top uk-animation-fade" (click)="toHeader()" >
+                                <a ><h3><strong>CURRICULUM</strong></h3></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="uk-navbar-right">
+                        <div class="uk-navbar-center uk-animation-fade">
+                            <ul class="uk-navbar-nav uk-visible@m">
+                                <li class="uk-active" (click)="toHeader()"><a>Inicio</a></li>
+                                <li class="uk-active" (click)="toHabilidades()"><a>Habilidades</a></li>
+                                <li class="uk-active" (click)="toHistorial()"><a>Historial Laboral</a></li>
+                                <li class="uk-active" (click)="toProyectos()"><a>Proyectos</a></li>
+                                <li class="uk-active" (click)="toContacto()"><a>Contacto</a></li>
+                            </ul>
+                        </div>
+                        <div class="uk-margin uk-text-right uk-text-left boton-regresar">
+                            <div class="uk-form-controls">
+                                <a href="/admin">
+                                    <button class="uk-button uk-button-primary uk-border-pill uk-active">ADMIN</button>
+                                  </a>
+                            </div>
+                        </div>
+                        <div class="">
+                            <a href="#" class="uk-navbar-toggle uk-hidden@m" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
+                        </div>
+                    </div>    
+                </nav>
+
+            </div>
+            
+        
+            <div *ngFor="let header of headers" class="uk-child-width-expand@s uk-text-center"  uk-grid>
+                <div class="uk-width-auto@m">
+                    <div class="uk-card uk-card-body"></div>
+                </div>
+                
+                <div class="uk-grid-item-match uk-width-1-3@m">
+                    <div class="uk-card uk-card-body">
+                        <div class="uk-inline" >
+                            <img class="uk-border-circle" src={{header.url_imagen}}
+                            width="350" height="350">
+                        </div>
+                        <h3>{{header.nombre}}</h3>
+                        <p>
+                            {{header.puesto}}
+                        </p>
+                    </div>
+                </div>
+
+                <div   class=" uk-card uk-card-body uk-width-expand@m  uk-margin-large-top uk-margin-left  uk-margin-bottom">
+                    <p class="uk-h2">MI INFORMACIÓN</p>
+                    <h5 class="uk-text-justify">
+                        {{header.descripcion}}
+                    </h5>
+                </div>
+                
+                <div class="uk-width-auto@m">
+                    <div class="uk-card uk-card-body"></div>
+                </div>
+        </div>
+
+    </div>
+</div >
+
+<div id="sidenav" uk-offcanvas="flip: true" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar">
+        <ul class="uk-nav">
+            <li class="uk-text-large" (click)="toHeader()"><a>Inicio</a></li>
+            <li class="uk-text-large" (click)="toHabilidades()"><a>Habilidades</a></li>
+            <li class="uk-text-large" (click)="toHistorial()"><a>Historial Laboral</a></li>
+            <li class="uk-text-large" (click)="toProyectos()"><a>Proyectos</a></li>
+            <li class="uk-text-large" (click)="toContacto()"><a>Contacto</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+
+<div  class="uk-position-relative">
+    <div class="uk-section-default">
+        <div uk-height-viewport class="uk-light uk-background-cover" style="background-image: url(/assets/img/background.png)">
+           
+            <div class="uk-sticky" uk-sticky=" cls-active: uk-navbar-sticky uk-navbar-transparent;">
+            
+                <nav uk-navbar class="uk-navbar-container uk-navbar-transparent uk-visible@m" uk-navbar style="position: relative; z-index: 980;">
+                    <div class="uk-navbar-center">
+                        <ul class="uk-navbar-nav uk-navbar-toggle">
+                            <li class="uk-active"><a href="#">Inicio</a></li>
+                            <li class="uk-active"><a href="#">Habilidades</a></li>
+                            <li class="uk-active"><a href="#">Historial Laboral</a></li>
+                            <li class="uk-active"><a href="#">Proyectos</a></li>
+                            <li class="uk-active"><a href="#">Contacto</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            
+
+            <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+                <div class="uk-width-auto@m">
+                    <div class="uk-card uk-card-body"></div>
+                </div>
+                
+                <div class="uk-grid-item-match uk-width-1-3@m">
+                    <div class="uk-card uk-card-body">
+                        <div class="uk-inline" >
+                            <img class="uk-border-circle" src="/assets/img/perfil.jpeg" 
+                            width="350" height="350">
+                        </div>
+                        <h3>AXEL IVÁN GONZÁLEZ</h3>
+                        <p>
+                            DESARROLLADOR WEB
+                        </p>
+                    </div>
+                </div>
+
+                <div  class=" uk-card uk-card-body uk-width-expand@m  uk-margin-large-top uk-margin-left  uk-margin-bottom">
+                    <p class="uk-h2">MI INFORMACIÓN</p>
+                    <p class="uk-text-justify">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type
+                        specimen book. It has survived not only five centuries, but also the leap into
+                        electronic typesetting, remaining essentially unchanged. It was popularised in
+                        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                        and more recently with desktop publishing software like Aldus PageMaker 
+                        including versions of Lorem Ipsum.
+                    </p>
+                </div>
+                
+                <div class="uk-width-auto@m">
+                    <div class="uk-card uk-card-body"></div>
+                </div>
+
+        </div>
+    </div>
+</div>
+
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--    HEADER DONDE ESTAN LOS 2 CARDS PERFIL Y MI INFO
+
+
+    <div class="uk-child-width-1-2@s uk-light uk-text-center uk-background-cover"
+     style="background-image: url(/assets/img/background.png);" uk-grid>
+    <div class="uk-grid-item-match uk-margin-large-left uk-width-1-2">
+        <div class="uk-card uk-card-body">
+            <div class="uk-inline" >
+                <img class="uk-border-circle" src="/assets/img/perfil.jpeg" 
+                width="350" height="350">
+            </div>
+            <h3>AXEL IVÁN GONZÁLEZ</h3>
+            <p>
+                DESARROLLADOR WEB
+            </p>
+        </div>
+     </div>
+    <div  class="uk-margin-large-top uk-width-1-3">
+        <p class="uk-h2">MI INFORMACIÓN</p>
+        <p class="uk-text-justify">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type
+            specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in
+            the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus PageMaker 
+            including versions of Lorem Ipsum.
+        </p>
+    </div>
+</div>
+-->
+
+
+
+<!--        ESTE ES EL NAVBAR ANTERIOR
+
+<nav class="uk-navbar uk-light uk-background-cover" style="background-image: url(/assets/img/navbar.png);" uk-navbar>
+    <div class="uk-navbar-center">
+        <ul class="uk-navbar-nav">
+            <li class="uk-active"><a href="#">Inicio</a></li>
+            <li class="uk-active"><a href="#">Habilidades</a></li>
+            <li class="uk-active"><a href="#">Historial Laboral</a></li>
+            <li class="uk-active"><a href="#">Proyectos</a></li>
+            <li class="uk-active"><a href="#">Contacto</a></li>
+        </ul>
+    </div>
+</nav>
+-->

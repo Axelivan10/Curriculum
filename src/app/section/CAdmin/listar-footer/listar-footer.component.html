@@ -1,0 +1,24 @@
+<div class="background-color uk-padding-large uk-light" uk-height-viewport="offset-top: true">
+    <table class="uk-table uk-table-justify uk-table-divider uk-container-large">
+        <thead>
+            <tr>
+                
+                <th>NOMBRE</th>
+                <th>URL DE IMAGEN</th>
+                <th>URL DE LINK</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let footer of footers">
+            <tr>
+                <td>{{footer.nombre}}</td>
+                <td>{{footer.url_imagen}}</td>
+                <td>{{footer.url_link}}</td>
+                <td><button class="uk-button uk-button-default" [routerLink]="[ '/admin/footer/', footer.id]" type="button">EDITAR</button></td>
+                <td><button class="uk-button uk-button-default" (click)="deleteFooter(footer.id)" type="button">ELIMINAR</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+

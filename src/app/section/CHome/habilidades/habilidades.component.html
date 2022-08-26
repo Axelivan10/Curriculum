@@ -1,0 +1,29 @@
+<div uk-height-viewport class="uk-light uk-background-cover habilidades" id="habilidades" style="background-image: url(/assets/img/fondo-arena.png)">
+    <div class="uk-container uk-container-small">
+        <h2 class="uk-heading-divider uk-margin-large-top">HABILIDADES</h2>
+    </div>
+    
+    <div class="uk-container padding-container">
+       
+
+        <div class="uk-child-width-1-1 uk-text-center uk-margin-large-left" uk-grid>
+            <div class="uk-padding">
+                <div class="uk-child-width-1-3 uk-text-center" uk-grid>
+                    <div class="uk-child-width-expand@s" *ngFor="let habilidad of habilidades" uk-grid>
+                        <div class="uk-width-expand@m uk-text-center">
+                            <img class="uk-border-circle" src={{habilidad.url_imagen}} width="160">
+                         </div>
+                        <div>
+                            <h3>{{habilidad.titulo}}</h3>
+                            <h3>{{habilidad.porcentaje}}%</h3>
+                            <progress class="uk-progress" value="{{habilidad.porcentaje}}" max="100"></progress>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

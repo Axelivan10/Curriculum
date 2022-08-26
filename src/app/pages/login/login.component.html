@@ -1,0 +1,67 @@
+<div class="uk-section uk-section-muted uk-flex uk-flex-middle uk-animation-fade" uk-height-viewport uk-animation-fade>
+	<div class="uk-width-1-1">
+		<div class="uk-container uk-margin-top">
+			<div class="uk-grid-margin uk-grid uk-grid-stack" uk-grid>
+				<div class="uk-width-5-6 uk-margin-auto">
+					<div class="uk-card uk-card-default uk-card-large uk-grid-collapse uk-child-width-1-2@s uk-margin uk-border-rounded uk-position-relative uk-overflow-hidden" uk-grid>
+						<div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+							<img src="/assets/icon/hacker.png" alt="" uk-cover>
+							<canvas width="600" height="400"></canvas>
+						</div>
+						<div>
+							<div class="uk-card-body">
+								<h3 class="uk-card-title uk-text-bold uk-text-uppercase uk-text-primary">Iniciar Sesión</h3>
+
+								<form>
+
+									<div class="uk-margin">
+										<label class="uk-form-label" for="form-stacked-text">Email</label>
+										<div class="uk-form-controls">
+											<input class="uk-input" [(ngModel)]="user.username" [ngModelOptions]="{standalone: true}" type="text">
+										</div>
+									</div>
+									<div class="uk-margin">
+										<label class="uk-form-label" for="form-stacked-text">Password</label>
+										<div class="uk-form-controls">
+											<input class="uk-input" [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}" type="password">
+										</div>
+										<small class="uk-flex uk-flex-middle uk-margin-small-top">Al menos 6 caracteres, mayuscula, numero y simbolo especial.</small>
+									</div>
+									<div class="uk-margin">
+										<div class="uk-form-controls">
+											<button class="uk-button uk-button-primary" (click)="login()" type="submit">Iniciar Sesión</button>
+										</div>
+									</div>
+								</form>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="uk-margin uk-text-right uk-margin-large-top boton-regresar">
+				<a href="/">
+					<div class="uk-form-controls">
+						<button class="uk-button uk-button-primary uk-active">Regresar</button>
+					</div>
+				  </a>
+            </div>
+
+		</div>
+       
+	</div>
+</div>
+
+
+<a href="#modal-center" uk-toggle></a>
+
+<div id="modal-center" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+		<h2 class="uk-modal-title">ERROR AL VALIDAR USUARIO O CONTRASEÑA</h2>
+        <p>Revisa que tú usuario y contraseña esten correctamente escritos.</p>
+		<p>Intenta con un usuario y contrasela validos nuevamente.</p>
+
+    </div>
+</div>

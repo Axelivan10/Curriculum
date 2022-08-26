@@ -1,0 +1,26 @@
+<div class="background-color uk-padding uk-light" uk-height-viewport="offset-top: true">
+    <table class="uk-table uk-table-justify uk-table-divider uk-container-large uk-margin-left uk-margin-medium-top">
+        <thead>
+            <tr>
+                <th>PUESTO</th>
+                <th>TITULO</th>
+                <th>FECHA INICIO</th>
+                <th>FECHA FIN</th>
+                <th>DESCRIPCIÓN</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let historial of historiales">
+            <tr>
+                <td>{{historial.puesto}}</td>
+                <td>{{historial.titulo}}</td>
+                <td>{{historial.fecha_inicio}}</td>
+                <td>{{historial.fecha_fin}}</td>
+                <td>{{historial.descripcion}}</td>
+                <td><button class="uk-button uk-button-default" [routerLink]="[ '/admin/historial/', historial.id]" type="button">EDITAR</button></td>
+                <td><button class="uk-button uk-button-default" (click)="deleteHistorial(historial.id)" type="button">ELIMINAR</button></td>
+            </tr>
+        </tbody>
+    </table>
+    
+
+</div>

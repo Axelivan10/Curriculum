@@ -1,0 +1,41 @@
+<div class="background-color uk-padding-large uk-light" uk-height-viewport="offset-top: true">
+    <div class="uk-text-center uk-margin-medium-top">
+        <h2>CONTACTO</h2>
+    </div>
+    
+    <div class="uk-modal-body  uk-margin-large-top uk-container-small"  id="contacto" uk-overflow-auto>
+    
+        <form class="uk-form-horizontal uk-margin-large">
+    
+            <div class="uk-margin">
+                <label class="uk-form-label"  for="form-horizontal-text">Correo: </label>
+                <div class="uk-form-controls ">
+                    <input class="uk-input" [(ngModel)]="contacto.correo" [ngModelOptions]="{standalone: true}" id="form-horizontal-text" type="text" >
+                </div>
+            </div>
+            <div class="uk-margin ">
+                <label class="uk-form-label" for="form-horizontal-text">Direccion: </label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" [(ngModel)]="contacto.direccion" [ngModelOptions]="{standalone: true}" id="form-horizontal-text" type="text" >
+                </div>
+            </div>
+            <div class="uk-margin ">
+                <label class="uk-form-label" for="form-horizontal-text">Usuario Linkedin: </label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" [(ngModel)]="contacto.usuario_linkedin" [ngModelOptions]="{standalone: true}" id="form-horizontal-text" type="text" >
+                </div>
+            </div>
+            <div class="uk-margin ">
+                <label class="uk-form-label" for="form-horizontal-text">Url Imagen Linkedin: </label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" [(ngModel)]="contacto.url_imagen_linkedin" [ngModelOptions]="{standalone: true}" id="form-horizontal-text" type="text" >
+                </div>
+            </div>
+            <div class="uk-text-right uk-margin-large-top">
+                <button class="uk-button uk-button-default uk-margin-right" (click)="addContacto()" type="button">GUARDAR</button>
+                <button class="uk-button uk-button-default" (click)="cancel()" type="button">CANCELAR</button>
+            </div>
+        </form>
+    </div>
+</div>
+

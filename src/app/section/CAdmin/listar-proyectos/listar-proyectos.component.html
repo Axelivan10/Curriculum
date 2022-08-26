@@ -1,0 +1,23 @@
+<div class="background-color uk-padding-large uk-light" uk-height-viewport="offset-top: true">
+    <table class="uk-table uk-table-justify uk-table-divider uk-container-large ">
+        <thead>
+            <tr>
+                <th>TITULO</th>
+                <th>FECHA INICIO</th>
+                <th>FECHA FIN</th>
+                <th>DESCRIPCIÓN</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let proyecto of proyectos">
+            <tr>
+                <td>{{proyecto.titulo}}</td>
+                <td>{{proyecto.fecha_inicio}}</td>
+                <td>{{proyecto.fecha_fin}}</td>
+                <td>{{proyecto.descripcion}}</td>
+                <td><button class="uk-button uk-button-default" [routerLink]="[ '/admin/proyectos/', proyecto.id]" type="button">EDITAR</button></td>
+                <td><button class="uk-button uk-button-default" (click)="deleteProyecto(proyecto.id)" type="button">ELIMINAR</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

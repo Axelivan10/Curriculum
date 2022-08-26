@@ -1,0 +1,50 @@
+<div class="background-color uk-padding-large uk-light" uk-height-viewport="offset-top: true">
+    <div class="uk-text-center">
+        <h2>HISTORIAL DEL DESARROLLADOR</h2>
+        </div>
+    
+    
+    <div class="uk-modal-body uk-margin-large-top uk-container-small" id="historial" uk-overflow-auto>
+    
+        <form class="uk-form-horizontal ">
+    
+            <div class="uk-margin">
+                <label class="uk-form-label"  for="form-horizontal-text">Puesto: </label>
+                <div class="uk-form-controls ">
+                    <input class="uk-input" [(ngModel)]="historial.puesto" [ngModelOptions]="{standalone: true}" id="form-horizontal-text" type="text" >
+                </div>
+            </div>
+            <div class="uk-margin ">
+                <label class="uk-form-label" for="form-horizontal-text">Titulo: </label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" [(ngModel)]="historial.titulo" [ngModelOptions]="{standalone: true}" id="form-horizontal-text" type="text" >
+                </div>
+            </div>
+            <div class="uk-margin ">
+                <label class="uk-form-label" for="form-horizontal-text">fecha Inicio: </label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" [(ngModel)]="historial.fecha_inicio" [ngModelOptions]="{standalone: true}" id="form-horizontal-text" data-uk-datepicker="{format:'DD.MM.YYYY'}" placeholder="DD.MM.YYYY" type="text" >
+                </div>
+            </div>
+            <div class="uk-margin ">
+                <label class="uk-form-label" for="form-horizontal-text">fecha Fin: </label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" [(ngModel)]="historial.fecha_fin" [ngModelOptions]="{standalone: true}" id="form-horizontal-text" data-uk-datepicker="{format:'DD.MM.YYYY'}" placeholder="DD.MM.YYYY" type="text" >
+                </div>
+            </div>
+    
+            <div class="uk-margin ">
+                <label class="uk-form-label" for="form-horizontal-text">Descripcion: </label>
+                <div class="uk-form-controls">
+                     <textarea class="uk-textarea" [(ngModel)]="historial.descripcion" [ngModelOptions]="{standalone: true}" rows="6"></textarea>
+                </div>
+            </div>
+    
+            <div class="uk-text-right uk-margin-large-top">
+                <button class="uk-button uk-button-default uk-margin-right" (click)="addHistorial()" type="button">GUARDAR</button>
+                <button class="uk-button uk-button-default" (click)="cancel()" type="button">CANCELAR</button>
+            </div>
+        </form>
+    </div>
+    
+</div>

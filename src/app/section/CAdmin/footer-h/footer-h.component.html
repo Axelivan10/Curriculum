@@ -1,0 +1,37 @@
+<div class="background-color uk-padding-large uk-light" uk-height-viewport="offset-top: true">
+    <div class="uk-text-center uk-margin-medium-top">
+        <h2>FOOTER</h2>
+        </div>
+    
+    
+    <div class="uk-modal-body  uk-container-small" id="footer" uk-overflow-auto>
+    
+        <form class="uk-form-horizontal uk-margin-large">
+    
+            <div class="uk-margin">
+                <label class="uk-form-label"  for="form-horizontal-text">Nombre: </label>
+                <div class="uk-form-controls ">
+                    <input class="uk-input" [(ngModel)]="footer.nombre" [ngModelOptions]="{standalone: true}" id="form-horizontal-text" type="text" >
+                </div>
+            </div>
+            <div class="uk-margin ">
+                <label class="uk-form-label" for="form-horizontal-text">Url Imagen: </label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" [(ngModel)]="footer.url_imagen" [ngModelOptions]="{standalone: true}" id="form-horizontal-text" type="text" >
+                </div>
+            </div>
+            <div class="uk-margin ">
+                <label class="uk-form-label" for="form-horizontal-text">Url Link: </label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" [(ngModel)]="footer.url_link" [ngModelOptions]="{standalone: true}" id="form-horizontal-text" type="text" >
+                </div>
+            </div>
+            <div class="uk-text-right uk-margin-large-top">
+                <button class="uk-button uk-button-default uk-margin-right" (click)="addFooter()" type="button">GUARDAR</button>
+                <button class="uk-button uk-button-default" (click)="cancel()" type="button">CANCELAR</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+

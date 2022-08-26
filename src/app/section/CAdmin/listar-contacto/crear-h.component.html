@@ -1,0 +1,24 @@
+<div class="background-color uk-padding-large uk-light" uk-height-viewport="offset-top: true">
+    <table class="uk-table uk-table-justify uk-table-divider uk-container-large  uk-margin-medium-top">
+        <thead>
+            <tr>
+                
+                <th>CORREO</th>
+                <th>DIRECCIÓN</th>
+                <th>USUARIO LINKEDIN</th>
+                <th>URL DE IMAGEN</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let contacto of contactos">
+            <tr>
+                <td>{{contacto.correo}}</td>
+                <td>{{contacto.direccion}}</td>
+                <td>{{contacto.usuario_linkedin}}</td>
+                <td>{{contacto.url_imagen_linkedin}}</td>
+                <td><button class="uk-button uk-button-default" [routerLink]="[ '/admin/contacto/', contacto.id]" type="button">EDITAR</button></td>
+                <td><button class="uk-button uk-button-default" (click)="deleteContacto(contacto.id)" type="button">ELIMINAR</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

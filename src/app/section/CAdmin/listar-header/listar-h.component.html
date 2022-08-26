@@ -1,0 +1,25 @@
+<div class="background-color uk-padding-large uk-light">
+    <table class="uk-table uk-table-justify uk-table-divider uk-container-large uk-margin-left"
+     uk-height-viewport="offset-top: true">
+        <thead>
+            <tr>
+                <th>NOMBRE</th>
+                <th>PUESTO</th>
+                <th>URL DE IMAGEN</th>
+                <th>DESCRIPCIÓN</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let header of headers">
+            <tr>
+                <td>{{header.nombre}}</td>
+                <td>{{header.puesto}}</td>
+                <td>{{header.url_imagen}}</td>
+                <td>{{header.descripcion}}</td>
+                <td><button class="uk-button uk-button-default" [routerLink]="[ '/admin/inicio/', header.id]" type="button">EDITAR</button></td>
+                <td><button class="uk-button uk-button-default" (click)="deleteHeader(header.id)"  type="button">ELIMINAR</button></td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>

@@ -1,0 +1,50 @@
+<div uk-height-viewport class="uk-light uk-background-cover contacto" id="contacto" style="background-image: url(/assets/img/background.png)">
+    <div class="uk-container uk-container-small">
+        <h2 class="uk-heading-divider uk-margin-large-top">CONTACTO</h2>
+    </div>
+    
+    <div class="uk-container uk-text-center padding-container">
+        
+        <div class="uk-text-center" uk-grid>
+            
+            
+            <div class="uk-width-expand@m" *ngFor="let contacto of contactos">
+                <div class="uk-child-width-expand@s uk-text-left" uk-grid>
+                    <div class="uk-grid-item-match">
+                        <div class="uk-card uk-card-body">
+                        
+                            <div>
+                                <h4>Correo Electronico:</h4>
+                                <p>{{contacto.correo}}</p>
+                            </div>
+                            <div>
+                                <h4>Dirección:</h4>
+                                <p class="uk-text-justify">{{contacto.direccion}}</p>
+                            </div>
+                            <div>
+                                <h4>Linkedin:</h4>
+                                <p>{{contacto.usuario_linkedin}}</p>
+                            </div>
+
+                            <div class="uk-text-left uk-width-1-2 uk-margin-top" uk-grid>
+                               
+                                <div class="uk-width-expand@m">
+                                    <img src={{contacto.url_imagen_linkedin}} width="60">
+                                </div>
+
+                            </div>
+
+                       
+                     </div>
+                </div>
+                <div class="uk-width-expand@m uk-margin-top">
+                    <div class="uk-width-expand@m uk-text-right uk-text-center uk-child-width-1-1">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3448.1745545013514!2d-87.1135433618681!3d20.66112541352732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e4385446003ff%3A0x9008dbc497665221!2sPrivada%20Chacchoben!5e0!3m2!1sen!2smx!4v1654141880111!5m2!1sen!2smx" 
+                        width="450" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

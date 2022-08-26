@@ -1,0 +1,23 @@
+.uk-sticky {
+    background-color: rgba(0, 0, 0, 0.8) ;
+   }
+   
+   .uk-offcanvas-bar{
+   background-color: black
+   }
+
+.sitio-de{
+        padding: 0px 0px 0px 220px !important;
+}
+
+button{
+        margin: 10px;
+}
+
+button .sebaja{
+        margin-bottom: 20px;
+}
+
+.uk-light {
+        background-image: url(/assets/img/fondo-arena.png);
+}

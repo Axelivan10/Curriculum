@@ -1,0 +1,44 @@
+<div class="background-color uk-padding uk-light" uk-height-viewport="offset-top: true">
+    <div class="uk-text-center uk-margin-medium-top">
+        <h2>PROYECTOS DEL DESARROLLADOR</h2>
+        </div>
+    
+    
+    <div class="uk-modal-body   uk-container-small" id="proyectos" uk-overflow-auto>
+    
+        <form class="uk-form-horizontal uk-margin-large">
+    
+            <div class="uk-margin">
+                <label class="uk-form-label"  for="form-horizontal-text">Titulo: </label>
+                <div class="uk-form-controls ">
+                    <input class="uk-input" [(ngModel)]="proyecto.titulo" [ngModelOptions]="{standalone: true}" id="form-horizontal-text" type="text" >
+                </div>
+            </div>
+            <div class="uk-margin ">
+                <label class="uk-form-label" for="form-horizontal-text">Fecha Inicio: </label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" [(ngModel)]="proyecto.fecha_inicio" [ngModelOptions]="{standalone: true}" id="form-horizontal-text" data-uk-datepicker="{format:'DD.MM.YYYY'}" placeholder="DD.MM.YYYY" type="text" >
+                </div>
+            </div>
+            <div class="uk-margin ">
+                <label class="uk-form-label" for="form-horizontal-text">Fecha Fin: </label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" [(ngModel)]="proyecto.fecha_fin" [ngModelOptions]="{standalone: true}" id="form-horizontal-text" data-uk-datepicker="{format:'DD.MM.YYYY'}" placeholder="DD.MM.YYYY" type="text" >
+                </div>
+            </div>
+            <div class="uk-margin ">
+                <label class="uk-form-label" for="form-horizontal-text">Descripcion: </label>
+                <div class="uk-form-controls">
+                     <textarea class="uk-textarea" [(ngModel)]="proyecto.descripcion" [ngModelOptions]="{standalone: true}" rows="6"></textarea>
+                </div>
+            </div>
+    
+            <div class="uk-text-right uk-margin-large-top">
+                <button class="uk-button uk-button-default uk-margin-right" (click)="addProyecto()" type="button">GUARDAR</button>
+                <button class="uk-button uk-button-default" (click)="cancel()" type="button">CANCELAR</button>
+            </div>
+        </form>
+    </div>
+    
+</div>
+

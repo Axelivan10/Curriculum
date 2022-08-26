@@ -1,0 +1,40 @@
+<div  class="background-color uk-padding-large uk-light" uk-height-viewport="offset-top: true">
+        <div class="uk-text-center uk-padding-medium-top">
+        <h2>INFORMACIÓN PERSONAL DESARROLLADOR</h2>
+        </div>
+        <div class="uk-modal-body uk-padding-medium-top" id="header" uk-overflow-auto>
+        
+            <form class="uk-form-horizontal uk-container-small">
+        
+                <div class="uk-margin">
+                    <label class="uk-form-label"  for="form-horizontal-text">Nombre: </label>
+                    <div class="uk-form-controls ">
+                        <input class="uk-input" [(ngModel)]="header.nombre" [ngModelOptions]="{standalone: true}" id="form-horizontal-text" type="text" >
+                    </div>
+                </div>
+                <div class="uk-margin ">
+                    <label class="uk-form-label" for="form-horizontal-text">Puesto: </label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input" [(ngModel)]="header.puesto" [ngModelOptions]="{standalone: true}" id="form-horizontal-text" type="text" >
+                    </div>
+                </div>
+                <div class="uk-margin ">
+                    <label class="uk-form-label" for="form-horizontal-text">Imagen: </label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input" [(ngModel)]="header.url_imagen" [ngModelOptions]="{standalone: true}" id="form-horizontal-text" type="text" >
+                    </div>
+                </div>
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="form-horizontal-text">Descripción: </label>
+                    <div class="uk-form-controls ">
+                        <textarea class="uk-textarea" [(ngModel)]="header.descripcion" [ngModelOptions]="{standalone: true}" rows="8" ></textarea>
+                    </div>
+                </div>
+                <br>
+                <div class="uk-text-right ">
+                    <button class="uk-button uk-button-default uk-margin-right" (click)="addHeader()"  type="button">GUARDAR</button>
+                    <button class="uk-button uk-button-default" (click)="cancel()" type="button">CANCELAR</button>
+                </div>
+            </form>
+        </div>
+</div>

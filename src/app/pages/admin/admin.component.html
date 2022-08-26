@@ -1,0 +1,219 @@
+<div  class="uk-position-relative" id="admin">
+    <div class="uk-section-default">
+        <div uk-height-viewport class="uk-light uk-background-cover" id="imagen">
+            <div class="uk-sticky" uk-sticky=" cls-active: uk-navbar-sticky uk-navbar-transparent;">
+        
+                <nav uk-navbar class="uk-container uk-navbar-transparent">
+                    <div class="uk-navbar-left">
+                        <ul class="uk-navbar-nav">
+                            <li class="uk-active uk-margin-top">
+                                <a><h3>ADMINISTRADOR <strong>CV</strong></h3></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="uk-navbar-right">
+                        <div class="uk-navbar-right">
+                            <a href="/">
+                                <div class="uk-navbar-nav uk-visible@m">
+                                    <li class="uk-active"><a>REGRESAR</a></li>
+                                    <li (click)="logout()" class="uk-active"><a>LOG-OUT</a></li>
+                                </div>
+                              </a>
+                        </div>
+
+                        <div class="">
+                            <a href="#" class="uk-navbar-toggle uk-hidden@m" uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
+                        </div>
+                    </div>    
+                </nav>
+
+            </div>
+
+            <div class="uk-text-center uk-margin-large-top uk-animation-fade" uk-grid>>
+                <div class="uk-width-expand@m">
+                    <h2  class="uk-text-left sitio-de  uk-width-1-2@m">SITIO DE ADMINISTRACIÓN</h2>
+                    <div class="uk-section uk-margin-large-left">
+                        <div class="uk-container">
+                           
+                            <table class="uk-table uk-table-divider">
+                                
+                                <div class="uk-overflow-auto" >
+                                    <table class="uk-table uk-table-hover uk-table-middle uk-table-divider uk-child-width-1-2 uk-child-width-1-2@m uk-child-width-1-3@l">
+                                        <thead>
+                                            <tr>
+                                                <th class="uk-table-shrink"></th>
+                                                <th class="uk-table-shrink">SECCIÓN</th>
+                                                <th class="uk-table-expand uk-text-center">CATALOGO</th>
+                                            
+                                            </tr>
+                                        </thead>
+                                        <tbody class=" ">
+                                            <tr>
+                                                <td></td>
+                                                <td><span uk-icon="icon: album; ratio: 2"></span></td>
+                                                <td class="uk-table-link">
+                                                    ENCABEZADO
+                                                </td>
+                                                <td class="uk-text-nowrap">
+                                                    <a class="uk-button uk-button-default" [routerLink]="['inicio/','-1']" type="button">CREAR</a>
+                                                </td>
+                                                <td class="uk-text-nowrap uk-divider-vertical">
+                                                    <button class="uk-button uk-button-default" [routerLink]="['iniciolista']" type="button">VER</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td><span uk-icon="icon: album; ratio: 2"></span></td>
+                                                <td class="uk-table-link">
+                                                   HABILIDADES
+                                                </td>
+                                                <td class="uk-text-nowrap">
+                                                    <a class="uk-button uk-button-default" [routerLink]="['habilidades/','-1']" type="button">CREAR</a>
+                                                </td>
+                                                <td class="uk-text-nowrap uk-divider-vertical">
+                                                    <button class="uk-button uk-button-default" [routerLink]="['habilidadeslista']" type="button">VER</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td><span uk-icon="icon: album; ratio: 2"></span></td>
+                                                <td class="uk-table-link">
+                                                    HISTORIAL
+                                                </td>
+                                                <td class="uk-text-nowrap">
+                                                    <button class="uk-button uk-button-default" [routerLink]="['historial/','-1']" type="button">CREAR</button>
+                                                </td>
+                                                <td class="uk-text-nowrap uk-divider-vertical">
+                                                    <button class="uk-button uk-button-default" [routerLink]="['historiallista']" type="button">VER</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td><span uk-icon="icon: album; ratio: 2"></span></td>
+                                                <td class="uk-table-link">
+                                                    PROYECTOS
+                                                </td>
+                                                <td class="uk-text-nowrap ">
+                                                    <button class="uk-button uk-button-default" [routerLink]="['proyectos/','-1']" type="button">CREAR</button>
+                                                </td>
+                                                <td class="uk-text-nowrap uk-divider-vertical">
+                                                    <button class="uk-button uk-button-default" [routerLink]="['proyectoslista']" type="button">VER</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td><span uk-icon="icon: album; ratio: 2"></span></td>
+                                                <td class="uk-table-link">
+                                                    CONTACTO
+                                                </td>
+                                                <td class="uk-text-nowrap">
+                                                    <button class="uk-button uk-button-default" [routerLink]="['contacto/','-1']" type="button">CREAR</button>
+                                                </td>
+                                                <td class="uk-text-nowrap uk-divider-vertical">
+                                                    <button class="uk-button uk-button-default" [routerLink]="['contactolista']" type="button">VER</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td><span uk-icon="icon: album; ratio: 2"></span></td>
+                                                <td class="uk-table-link">
+                                                    FOOTER
+                                                </td>
+                                                <td class="uk-text-nowrap">
+                                                    <button class="uk-button uk-button-default" [routerLink]="['footer/','-1']" type="button">CREAR</button>
+                                                </td>
+                                                <td class="uk-text-nowrap uk-divider-vertical">
+                                                    <button class="uk-button uk-button-default" [routerLink]="['footerlista']" type="button">VER</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </table>
+                    
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="uk-width-1-4@m uk-margin-large-top">
+                    <div class="uk-card uk-card-body uk-text-left">
+                        <h3></h3>
+                        <h4></h4>
+                        <td>
+                            <li></li>
+                            
+                            <li></li>
+                        </td>
+                     </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<div id="sidenav" uk-offcanvas="flip: true" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar">
+        <ul class="uk-nav">
+            <li class="uk-text-large"><a href="/">REGRESAR</a></li>
+            <li class="uk-text-large"><a href="/">LOGOUT</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+<!-- <a class="uk-button uk-button-default" href="#modal-overflow" uk-toggle>Open</a>
+
+<div id="modal-overflow" uk-modal>
+    <div class="uk-modal-dialog">
+
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+
+        <div class="uk-modal-header">
+            <h2 class="uk-modal-title">Información Personal</h2>
+        </div>
+
+        <div class="uk-modal-body" uk-overflow-auto>
+
+            <form class="uk-form-horizontal uk-margin-large">
+
+                <div class="uk-margin">
+                    <label class="uk-form-label"  for="form-horizontal-text">Nombre: </label>
+                    <div class="uk-form-controls ">
+                        <input class="uk-input" id="form-horizontal-text" type="text" >
+                    </div>
+                </div>
+                <div class="uk-margin ">
+                    <label class="uk-form-label" for="form-horizontal-text">Puesto: </label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input" id="form-horizontal-text" type="text" >
+                    </div>
+                </div>
+                <div class="uk-margin ">
+                    <label class="uk-form-label" for="form-horizontal-text">Imagen: </label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input" id="form-horizontal-text" type="text" >
+                    </div>
+                </div>
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="form-horizontal-text">Descripción: </label>
+                    <div class="uk-form-controls ">
+                        <textarea class="uk-textarea" rows="8" ></textarea>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+            <button class="uk-button uk-button-primary" type="button">Save</button>
+        </div>
+
+    </div>
+</div> -->

@@ -1,0 +1,33 @@
+<div uk-height-viewport class="uk-light uk-background-cover proyectos" id="proyectos" style="background-image: url(/assets/img/fondo-arena.png)">
+    <div class="uk-container uk-container-small">
+        <h2 class="uk-heading-divider uk-margin-large-top">PROYECTOS / TIEMPO DE DESARROLLO</h2>
+    </div>
+    
+    <div class="uk-container uk-text-center">
+        
+        <div class="uk-width-expand@m uk-text-right">
+            <img class="uk-border-circle" src="/assets/icon/hacker.png" width="100">
+        </div>
+
+        <div class="uk-text-center" uk-grid>
+
+            <div class="uk-width-expand@m" *ngFor="let proyecto of proyectos">
+                <div class="uk-child-width-expand@s uk-text-left" uk-grid>
+                    <div class="uk-grid-item-match">
+                        <div class="uk-card uk-card-body">
+                            <h3>{{proyecto.titulo}}</h3>
+                            <p>
+                                {{proyecto.fecha_inicio}} -- {{proyecto.fecha_fin}}
+                            </p>
+                            <p class="uk-text-justify">
+                            {{proyecto.descripcion}}
+                            </p>
+                        </div>
+                     </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+</div>
